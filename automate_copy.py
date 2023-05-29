@@ -4,18 +4,30 @@ import time
 def copy_description_to_destination(description):
     # Set the coordinates or identifiers of the destination
     # Adjust these values based on the specific application or website you're targeting
-    destination_coordinates = (26, 26)  # Example: (x, y) coordinates of the destination
-
-    # Click on the destination to focus on it
-    pyautogui.click(destination_coordinates)
     
-    time.sleep(1)
+    time.sleep(3)
+    
+    text_coordinates = (628, 35)  
+    pyautogui.click(text_coordinates)
+    
+    t_coordinates=(628,125)
+    pyautogui.click(t_coordinates)
+    
+    # time.sleep(1)
 
     # Paste the description
     pyautogui.typewrite(description)
+    a_coordinates=(628,215)
+    pyautogui.click(a_coordinates)
+    
+    p_coordinates=(1200,35)
+    pyautogui.click(p_coordinates)
+    
+    pu_coordinates=(1200,365)
+    pyautogui.click(pu_coordinates)
 
     # Press Enter key to submit (optional)
-    pyautogui.press('enter')
+    # pyautogui.press('enter')
 
 # Provide the path to the source document
 source_file_path = 'test.txt'
